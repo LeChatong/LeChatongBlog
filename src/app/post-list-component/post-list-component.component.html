@@ -1,0 +1,20 @@
+<ul class="list-group">
+  <li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': lIts > 0,
+                'list-group-item-danger': lIts < 0}">
+    <div class="row">
+      <div class="col-lg-9">
+        <h2>{{ titre }}</h2>
+      </div>
+      <div class="col-lg-3">
+        <h5 class=""><i>{{ creeLe | date:'short' }}</i></h5>
+      </div>
+    </div>
+    <p>
+      {{ contenu }}
+    </p>
+    {{lIts}}
+    <app-post-list-item-component [loveIts]="lIts" (msg)="theLoveIt($event)"></app-post-list-item-component>
+  </li>
+
+</ul>
