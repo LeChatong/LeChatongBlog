@@ -14,7 +14,7 @@ export class AppComponent {
     loveIts: number,
     created_at: Date
   };
-  posts: post[] = [
+  posts = [
     {
      title: 'Mon Premier Post',
      content: 'Ceci est le 1er post que je fais ! ',
